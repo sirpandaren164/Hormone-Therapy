@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="th"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Certificate · Hormone Therapy & Healthy Aging</title><link rel="stylesheet" href="app/style.css"></head>
+<title>Certificate · Hormone Therapy & Healthy Aging</title><link rel="stylesheet" href="app/style.css?v=20260920"></head>
 <body><div class="wrap">
 <div class="topbar no-print"><div class="brand"><div class="brandmark">WMC</div><div>Certificate of Completion<br><span class="small">Hormone Therapy & Healthy Aging</span></div></div><div class="nav"><a class="btn" href="index.html">Dashboard</a><a class="btn" href="verify.html">Verify Certificate</a></div></div>
 <div id="locked" class="card hidden"><h2>Certificate ยังไม่ปลดล็อก</h2><p>ต้องเรียนครบ 100% และผ่าน Final Exam อย่างน้อย 80%</p><a class="btn primary" href="index.html">กลับ Dashboard</a></div>
@@ -46,7 +46,7 @@
 <div class="no-print cert-actions"><button class="btn primary" id="pdfBtn">Download Certificate PDF</button><button class="btn" onclick="window.print()">Print / Save as PDF</button><a class="btn" id="verifyLink" href="verify.html">Verify Certificate</a></div>
 <div class="callout no-print" style="margin-top:14px">ใบประกาศประกอบด้วย Certificate ID และ QR สำหรับตรวจสอบข้อมูลใบประกาศ</div>
 </div></div>
-<script src="app/shared.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="app/shared.js?v=20260920"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 <script>
 async function hashRecord(x){const data=new TextEncoder().encode(x);const h=await crypto.subtle.digest('SHA-256',data);return [...new Uint8Array(h)].map(b=>b.toString(16).padStart(2,'0')).join('').slice(0,20)}
 function makeId(){const y=new Date().getFullYear();const a=new Uint8Array(4);crypto.getRandomValues(a);return 'HORM-'+y+'-'+[...a].map(x=>x.toString(16).padStart(2,'0')).join('').toUpperCase()}
