@@ -82,11 +82,24 @@ body{overflow:hidden}button{font:inherit}
 @media(max-width:980px){body{overflow:auto}.topbar{height:auto;min-height:var(--nav-h);padding:8px 10px;flex-wrap:wrap}.brand small{display:none}.learningcontext{order:3;width:100%;min-width:0}.context-topic{font-size:14px}.context-range,.context-pct{display:none}.stage{position:relative;top:0;bottom:auto;height:auto;min-height:calc(100vh - 170px);padding-top:118px;padding-bottom:80px}.viewer img{height:auto;max-height:calc(100vh - 240px);object-fit:contain}.bottom{position:fixed}.dropdownbar{margin-left:auto}}
 @media(max-width:680px){.brand{min-width:0}.brand b{font-size:11px}.context-breadcrumbs{display:none}.dropbtn{padding:7px 9px;font-size:12px}.dropdown-menu.lesson-menu{min-width:min(92vw,330px)}.dropdown-menu{min-width:min(88vw,260px)}.pager button{padding:8px 11px}.dots{display:none}.meta{display:none}}
 
-.prod-dashboard-link{position:fixed;right:18px;bottom:72px;z-index:9999;background:#0c67c8;color:#fff;text-decoration:none;padding:11px 15px;border-radius:999px;font-weight:850;font-family:Arial,sans-serif;box-shadow:0 8px 24px rgba(17,72,128,.25);border:1px solid rgba(255,255,255,.55)}.prod-dashboard-link:hover{background:#0758ad}.prod-dashboard-link span{opacity:.85;font-weight:700}@media(max-width:720px){.prod-dashboard-link{right:10px;bottom:66px;padding:9px 12px;font-size:12px}}
+
+/* --- Integrated course home --- */
+.top-action-link{display:inline-flex;align-items:center;justify-content:center;text-decoration:none;border:1px solid #d8e5f2;background:#fff;color:#173f73;border-radius:12px;padding:9px 12px;font-weight:850;white-space:nowrap;box-shadow:0 1px 0 rgba(16,57,109,.03)}
+.top-action-link:hover{background:#eef6ff;border-color:#bcd7f2}.top-action-link.cert{color:#0b765a}
+.course-hub-strip{display:grid;grid-template-columns:1.25fr 1fr 1fr;gap:12px;margin:0 2px 16px}
+.hub-card{background:#fff;border:1px solid var(--line);border-radius:18px;padding:15px 16px;box-shadow:0 8px 24px rgba(18,58,114,.07);min-height:126px}
+.hub-card h3{margin:0 0 8px;font-size:15px;color:#173f73}.hub-card p{margin:0;color:#687f98;font-size:12px;line-height:1.45}
+.hub-progress-row{display:flex;align-items:flex-end;justify-content:space-between;gap:12px}.hub-big-pct{font-size:36px;line-height:1;font-weight:950;color:#116fca}
+.hub-meter{height:8px;background:#e5eef7;border-radius:999px;overflow:hidden;margin:10px 0 8px}.hub-meter i{display:block;height:100%;border-radius:999px;background:linear-gradient(90deg,#2f8cff,#116fca)}
+.hub-actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}.hub-btn{border:1px solid #1c78df;background:#1c78df;color:#fff;border-radius:10px;padding:8px 11px;font-weight:850;cursor:pointer;text-decoration:none;font-size:12px}.hub-btn.secondary{background:#fff;color:#1769bd}.hub-btn.green{background:#0b8764;border-color:#0b8764}.hub-btn.locked{opacity:.48;pointer-events:none}
+.hub-name{font-size:17px;font-weight:900;color:#173f73;margin-bottom:4px}.hub-small{font-size:11px;color:#768ca3}.hub-status{display:inline-flex;align-items:center;padding:5px 8px;border-radius:999px;font-size:11px;font-weight:850;background:#fff2cf;color:#8a6200;margin-bottom:6px}.hub-status.ok{background:#e5f7f0;color:#087956}.hub-status.neutral{background:#edf5fc;color:#315f8d}
+.learning-path{margin:2px 2px 16px;padding:12px 15px;border:1px solid #d7e5f2;background:linear-gradient(90deg,#f8fbff,#eef7ff);border-radius:16px;display:flex;align-items:center;gap:9px;flex-wrap:wrap;color:#58718d;font-size:12px;font-weight:750}.learning-path b{color:#173f73}.learning-step{display:inline-flex;align-items:center;gap:6px}.learning-arrow{color:#8aa4bf}.profile-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}.profile-grid label{display:block;font-size:11px;font-weight:800;color:#617b96;margin-bottom:4px}.profile-grid input{width:100%;border:1px solid #d6e2ef;border-radius:10px;padding:10px 11px;font:inherit}.profile-grid .wide{grid-column:1/-1}.modal-save-row{display:flex;justify-content:flex-end;gap:8px;margin-top:14px}
+@media(max-width:1100px){.course-hub-strip{grid-template-columns:1fr 1fr}.course-hub-strip .hub-card:first-child{grid-column:1/-1}.module-home-grid{grid-template-columns:repeat(3,minmax(205px,1fr))}}
+@media(max-width:760px){.top-action-link{display:none}.course-hub-strip{grid-template-columns:1fr}.course-hub-strip .hub-card:first-child{grid-column:auto}.module-home-grid{grid-template-columns:1fr}.home-head{align-items:flex-start;flex-direction:column}.home-summary{white-space:normal}.profile-grid{grid-template-columns:1fr}.profile-grid .wide{grid-column:auto}}
+
 </style>
 </head>
 <body>
-<a class="prod-dashboard-link" href="index.html">⌂ Dashboard <span>· Final Exam</span></a>
 <div class="topbar">
   <div class="brand">
     <div class="logo"></div>
@@ -113,6 +126,8 @@ body{overflow:hidden}button{font:inherit}
   </div>
 
   <div class="dropdownbar">
+    <a class="top-action-link" href="exam.html">Final Exam</a>
+    <a class="top-action-link cert" href="certificate.html">Certificate</a>
     <div class="dropdown" id="lessonDropdown">
       <button class="dropbtn" id="lessonMenuBtn" aria-expanded="false" aria-haspopup="true">
         <span>บทเรียน</span><span class="label-long" id="lessonMenuCurrent">M1 · L1</span><span class="caret">▾</span>
@@ -869,7 +884,7 @@ const LESSONS = {
 const LESSON_ORDER = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31", "32", "33", "34", "35", "36", "37", "38", "39", "40", "41", "42", "43", "44", "45", "46", "47", "48", "49", "50", "51", "52", "53", "54"];
 const STORAGE_PREFIX = 'm1_m8_m8l5_integrated_v1';
 const MODULE_TOTAL = LESSON_ORDER.reduce((sum,id)=>sum+LESSONS[id].items.length,0);
-let mode = localStorage.getItem(STORAGE_PREFIX+'_mode') || 'lesson';
+let mode = 'home';
 let lesson = localStorage.getItem(STORAGE_PREFIX+'_active_lesson') || '54';
 if(!LESSONS[lesson]) lesson='54';
 let current = parseInt(localStorage.getItem(STORAGE_PREFIX+'_l'+lesson+'_page') || '0',10);
@@ -931,8 +946,8 @@ function preloadAdjacent(){
 
 function moduleLessonIds(m){ return LESSON_ORDER.filter(id=>displayModule(id)===String(m)); }
 function moduleProgress(m){
-  const ids=moduleLessonIds(m); let done=0,total=0;
-  ids.forEach(id=>{ const count=LESSONS[id].items.length; total+=count; const saved=parseInt(localStorage.getItem(STORAGE_PREFIX+'_l'+id+'_page')||'-1',10); if(Number.isFinite(saved)&&saved>=0) done+=Math.min(saved+1,count); });
+  const ids=moduleLessonIds(m), visited=courseVisited(); let done=0,total=0;
+  ids.forEach(id=>{ const count=LESSONS[id].items.length; total+=count; for(let i=0;i<count;i++) if(visited.has(id+':'+i)) done++; });
   return total?Math.round(done/total*100):0;
 }
 function moduleFirstLesson(m){ const ids=moduleLessonIds(m); return ids.length?ids[0]:null; }
@@ -942,35 +957,85 @@ function moduleLastVisited(m){
   for(let i=ids.length-1;i>=0;i--){ if(localStorage.getItem(STORAGE_PREFIX+'_l'+ids[i]+'_page')!==null) return ids[i]; }
   return ids[0]||null;
 }
+
+function homeSafeJSON(key,fallback){try{const v=JSON.parse(localStorage.getItem(key));return v ?? fallback;}catch(e){return fallback;}}
+function homeEsc(s){return String(s??'').replace(/[&<>\"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','\"':'&quot;',"'":'&#39;'}[c]));}
+function courseVisited(){
+  const set=new Set(homeSafeJSON(STORAGE_PREFIX+'_visited',[]));
+  LESSON_ORDER.forEach(id=>{const s=localStorage.getItem(STORAGE_PREFIX+'_l'+id+'_page');if(s!==null){const last=Math.min(parseInt(s,10)||0,LESSONS[id].items.length-1);for(let i=0;i<=last;i++)set.add(id+':'+i);}});
+  localStorage.setItem(STORAGE_PREFIX+'_visited',JSON.stringify([...set])); return set;
+}
+function courseProgressPct(){return Math.round(courseVisited().size/MODULE_TOTAL*100);}
+function courseIsComplete(){return courseVisited().size>=MODULE_TOTAL;}
+function learnerProfile(){return homeSafeJSON(STORAGE_PREFIX+'_profile',{name:'',thaiName:'',organization:'',email:''});}
+function finalExamState(){return homeSafeJSON(STORAGE_PREFIX+'_final_exam',{attempts:0,bestScore:0,passed:false,lastScore:0,passedAt:null});}
+function certState(){return homeSafeJSON(STORAGE_PREFIX+'_certificate',null);}
+function currentResumePoint(){
+  const id=localStorage.getItem(STORAGE_PREFIX+'_active_lesson')||'1';
+  const safeId=LESSONS[id]?id:'1';
+  let page=parseInt(localStorage.getItem(STORAGE_PREFIX+'_l'+safeId+'_page')||'0',10); if(!Number.isFinite(page)||page<0||page>=LESSONS[safeId].items.length)page=0;
+  return {id:safeId,page};
+}
+function editLearnerProfile(){
+  const p=learnerProfile();
+  openModal('ข้อมูลผู้เรียน',`<div class="profile-grid">
+    <div class="wide"><label>ชื่อ–นามสกุลภาษาอังกฤษสำหรับใบประกาศ</label><input id="profileName" value="${homeEsc(p.name||'')}" placeholder="Full name in English"></div>
+    <div class="wide"><label>ชื่อ–นามสกุลภาษาไทย (ไม่บังคับ)</label><input id="profileThaiName" value="${homeEsc(p.thaiName||'')}" placeholder="ชื่อ–นามสกุลภาษาไทย"></div>
+    <div><label>หน่วยงาน (ไม่บังคับ)</label><input id="profileOrg" value="${homeEsc(p.organization||'')}" placeholder="Organization / Center"></div>
+    <div><label>Email (ไม่บังคับ)</label><input id="profileEmail" value="${homeEsc(p.email||'')}" placeholder="name@example.com"></div>
+  </div><div class="modal-save-row"><button class="closebtn" onclick="closeModal()">ยกเลิก</button><button class="hub-btn" onclick="saveLearnerProfileFromModal()">บันทึกข้อมูล</button></div>`);
+}
+function saveLearnerProfileFromModal(){
+  const p={name:document.getElementById('profileName').value.trim(),thaiName:document.getElementById('profileThaiName').value.trim(),organization:document.getElementById('profileOrg').value.trim(),email:document.getElementById('profileEmail').value.trim()};
+  localStorage.setItem(STORAGE_PREFIX+'_profile',JSON.stringify(p)); closeModal(); renderHome(); toast('บันทึกข้อมูลผู้เรียนแล้ว');
+}
+window.editLearnerProfile=editLearnerProfile; window.saveLearnerProfileFromModal=saveLearnerProfileFromModal;
 function renderHome(){
   mode='home'; localStorage.setItem(STORAGE_PREFIX+'_mode','home');
   $('homeShell').style.display='block'; $('viewerPanel').style.display='none';
-  $('moduleChip').textContent='Home'; $('lessonChip').textContent='Modules 1–8'; $('screenChip').textContent='ศูนย์รวมบทเรียน';
-  $('lessonTitle').textContent='Hormone Education Home'; $('contextTopic').textContent='เลือกโมดูลเพื่อเริ่มเรียน'; $('contextRange').textContent='Modules 1–8'; $('contextPct').textContent='Home'; $('contextSource').style.display='none'; $('topProgress').style.width='0%'; $('lessonMenuCurrent').textContent='Home';
+  $('moduleChip').textContent='Home'; $('lessonChip').textContent='Modules 1–8'; $('screenChip').textContent='54 Lessons';
+  $('lessonTitle').textContent='Hormone Education Home'; $('contextTopic').textContent='เลือกโมดูลเพื่อเริ่มเรียน'; $('contextRange').textContent='Modules 1–8'; $('contextPct').textContent=courseProgressPct()+'%'; $('contextSource').style.display='none'; $('topProgress').style.width=courseProgressPct()+'%'; $('lessonMenuCurrent').textContent='Home';
   const moduleInfo={
     '1':{title:'Hormone Fundamentals',desc:'พื้นฐานฮอร์โมน ไทรอยด์ เทสโทสเตอโรน เอสโตรเจน adrenal hormones เมลาโทนิน และ GH–IGF-1'},
     '2':{title:'Female Hormone Therapy',desc:'ภาวะพร่อง estrogen/progesterone การวินิจฉัย อาการ การตรวจ และแนวทางการรักษาตามต้นฉบับ'},
     '3':{title:'Growth Hormone in Men',desc:'การวินิจฉัย GH deficiency อาการ การตรวจ การรักษา การฉีด และ dosing'},
-    '4':{title:'Coronary Heart Disease & Hormones',desc:'โรคหลอดเลือดหัวใจ กล้ามเนื้อหัวใจตาย และบทบาท thyroid/testosterone/GH therapies; ครบ Lesson 1–6'},
-    '5':{title:'Testosterone Therapy in Men',desc:'พื้นฐาน testosterone ภาวะพร่อง อาการ การตรวจ การรักษา route ต่าง ๆ และ subcutaneous testosterone pellets; ครอบคลุม Lesson 1–6'},
-    '6':{title:'Skin & Hormones',desc:"ฮอร์โมนกับผิวหนัง ความผิดปกติของสีผิว ACTH/Addison's disease รวมถึง thyroid hormones, GH, melatonin, DHEA, skin aging และริ้วรอยตามต้นฉบับ; ครบ Lesson 1–6"},
-    '7':{title:'Slimming Hormone Treatments',desc:'Lesson 1: source slides 1–4; Lesson 2: 5–12; Lesson 3: 13–19; Lesson 4: source slides 20–28; Lesson 5: thyroid treatment selection, desiccated thyroid, T3–T4 และ weight outcomes (29–34); Lesson 6: GH, IGF-1, body composition, fat distribution และ hormonal overweight patterns (35–50); Lesson 7: testosterone IM injections, enanthate, undecanoate และ pellets (81–84); Lesson 8: estrogen balance in men and aromatase blockers (86–92)'},
-    '8':{title:'Healthy and Happy Weight Reduction',desc:'Lesson 1 obesity และ energy balance; Lesson 2 nutrition science และ balanced eating; Lesson 3 physical activity, NEAT และ FITT; Lesson 4 sleep, stress, mindful eating และ sustainable habits; Lesson 5 progress tracking, plateaus, eating out และ long-term maintenance'}
+    '4':{title:'Coronary Heart Disease & Hormones',desc:'โรคหลอดเลือดหัวใจ กล้ามเนื้อหัวใจตาย และบทบาท thyroid/testosterone/GH therapies'},
+    '5':{title:'Testosterone Therapy in Men',desc:'พื้นฐาน testosterone ภาวะพร่อง อาการ การตรวจ การรักษา route ต่าง ๆ และ subcutaneous testosterone pellets'},
+    '6':{title:'Skin & Hormones',desc:"ฮอร์โมนกับผิวหนัง ACTH/Addison's disease, thyroid hormones, GH, melatonin, DHEA, skin aging และริ้วรอย"},
+    '7':{title:'Slimming Hormone Treatments',desc:'Thyroid, GH/IGF-1, testosterone, estrogen balance และ hormonal body-composition patterns'},
+    '8':{title:'Healthy and Happy Weight Reduction',desc:'Energy balance, nutrition, physical activity, sleep/stress, behavior change และ long-term maintenance'}
   };
+  const visited=courseVisited(), overallPct=courseProgressPct(), profile=learnerProfile(), exam=finalExamState(), cert=certState(), resume=currentResumePoint();
+  const profileName=profile.name?homeEsc(profile.name):'ยังไม่ได้ระบุชื่อผู้เรียน';
+  const profileSub=[profile.thaiName,profile.organization].filter(Boolean).map(homeEsc).join(' · ') || 'กรอกชื่อเพื่อใช้ใน Certificate of Completion';
+  const examReady=courseIsComplete();
+  const examLabel=exam.passed?`ผ่านแล้ว · Best ${exam.bestScore}%`:(examReady?'พร้อมทำ Final Exam':'ปลดล็อกเมื่อเรียนครบ 100%');
+  const examClass=exam.passed?'ok':(examReady?'neutral':'');
+  const certLabel=cert?`Issued · ${homeEsc(cert.id)}`:(exam.passed?'พร้อมออก Certificate':'รอผ่าน Final Exam ≥80%');
+  const certClass=cert||exam.passed?'ok':'';
   const cards=['1','2','3','4','5','6','7','8'].map(m=>{
     const ids=moduleLessonIds(m), first=moduleFirstLesson(m), last=moduleLastVisited(m), pct=moduleProgress(m), preview=LESSONS[first].items[0].src;
     const lastLabel=last?`Lesson ${displayLesson(last)}`:'ยังไม่เริ่ม';
+    const actionLabel=pct>0?'เรียนต่อ':'เริ่มเรียน';
     return `<div class="module-card">
-      <div class="module-card-preview"><img src="${preview}" alt="Module ${m} preview"><span class="module-card-badge">Module ${m}</span></div>
+      <div class="module-card-preview"><img src="${preview}" alt="Module ${m} · ${moduleInfo[m].title}"><span class="module-card-badge">Module ${m}</span></div>
       <div class="module-card-body"><h3>${moduleInfo[m].title}</h3><p>${moduleInfo[m].desc}</p>
       <div class="module-card-meta"><span>${ids.length} Lessons</span><span>${lastLabel}</span></div>
       <div class="module-card-progress"><i style="width:${pct}%"></i></div>
       <div class="module-card-meta"><span>Progress</span><span>${pct}%</span></div>
-      <div class="module-card-actions"><button onclick="switchLesson('${first}',0)">เริ่ม Module ${m}</button><button class="secondary" onclick="switchLesson('${last}')">เรียนต่อ</button></div>
+      <div class="module-card-actions"><button onclick="switchLesson('${first}',0)">เริ่ม Module ${m}</button><button class="secondary" onclick="switchLesson('${last}')">${actionLabel}</button></div>
       </div></div>`;
   }).join('');
-  $('homeShell').innerHTML=`<div class="home-head"><div><div class="home-kicker">Endocrine Education</div><div class="home-title">หน้าหลักหลักสูตรฮอร์โมน</div><div class="home-subtitle">เลือก Module เพื่อเริ่มเรียน หรือกลับมาเรียนต่อจากตำแหน่งล่าสุด</div></div><div class="home-summary">8 Modules · 51 Lessons · ${MODULE_TOTAL} Screens</div></div><div class="module-home-grid">${cards}</div><div class="home-footnote">Module 1–7 ยังคงอยู่ครบ และ Module 8 มี Lesson 1 จำนวน 8 หน้า พร้อม Lesson 2 จำนวน 5 หน้าเรื่อง Nutrition Science, meal timing, balanced plate, Zone Diet/macronutrient balance และ food variety เมนู “บทเรียน” ด้านบนสามารถกระโดดข้ามทุก Module และ Lesson ได้โดยตรง</div>`;
-  $('dots').innerHTML=''; $('progressMeta').textContent='Home · Modules 1–8'; $('barFill').style.width='0%'; $('pct').textContent='0%'; $('prevBtn').textContent='‹ Home'; $('nextBtn').textContent='เริ่ม Module 1 ›';
+  $('homeShell').innerHTML=`
+    <div class="home-head"><div><div class="home-kicker">Endocrine Education</div><div class="home-title">Hormone Therapy &amp; Healthy Aging</div><div class="home-subtitle">เรียนแบบเป็นลำดับ เลือก Module ที่ต้องการ หรือกลับมาเรียนต่อจากจุดล่าสุด</div></div><div class="home-summary">8 Modules · 54 Lessons · ${MODULE_TOTAL} Screens</div></div>
+    <div class="course-hub-strip">
+      <div class="hub-card"><div class="hub-progress-row"><div><h3>Course progress</h3><p>${visited.size} / ${MODULE_TOTAL} screens viewed</p></div><div class="hub-big-pct">${overallPct}%</div></div><div class="hub-meter"><i style="width:${overallPct}%"></i></div><div class="hub-actions"><button class="hub-btn" onclick="switchLesson('${resume.id}',${resume.page})">เรียนต่อ · Continue Learning</button><button class="hub-btn secondary" onclick="switchLesson('1',0)">เริ่มจาก Module 1</button></div></div>
+      <div class="hub-card"><h3>ผู้เรียน · Learner</h3><div class="hub-name">${profileName}</div><div class="hub-small">${profileSub}</div><div class="hub-actions"><button class="hub-btn secondary" onclick="editLearnerProfile()">แก้ไขข้อมูลผู้เรียน</button></div></div>
+      <div class="hub-card"><h3>Final Assessment &amp; Certificate</h3><div class="hub-status ${examClass}">${examLabel}</div><p>Final Exam ผ่านที่คะแนนอย่างน้อย 80%</p><div class="hub-status ${certClass}" style="margin-top:8px">${certLabel}</div><div class="hub-actions"><a class="hub-btn secondary ${examReady||exam.passed?'':'locked'}" href="exam.html">Final Exam</a><a class="hub-btn green ${exam.passed?'':'locked'}" href="certificate.html">Certificate</a></div></div>
+    </div>
+    <div class="learning-path"><b>Learning Path</b><span class="learning-step">① เรียน Module 1–8</span><span class="learning-arrow">→</span><span class="learning-step">② เรียนครบ 100%</span><span class="learning-arrow">→</span><span class="learning-step">③ Final Exam ≥80%</span><span class="learning-arrow">→</span><span class="learning-step">④ Certificate of Completion</span></div>
+    <div class="module-home-grid">${cards}</div>`;
+  $('dots').innerHTML=''; $('progressMeta').textContent='Home · '+overallPct+'% complete'; $('barFill').style.width=overallPct+'%'; $('pct').textContent=overallPct+'%'; $('prevBtn').textContent='‹ Home'; $('nextBtn').textContent=overallPct>0?'เรียนต่อ ›':'เริ่ม Module 1 ›';
   renderLessonDropdown();
 }
 function goHome(){ renderHome(); }
@@ -983,7 +1048,9 @@ function render(){
   const item = data.items[current];
   const lessonCount = data.items.length;
   const overall = overallIndex(lesson,current);
-  const modulePct = Math.round(((overall+1)/MODULE_TOTAL)*100);
+  try{const vk=STORAGE_PREFIX+'_visited';const arr=JSON.parse(localStorage.getItem(vk)||'[]');const key=lesson+':'+current;if(!arr.includes(key)){arr.push(key);localStorage.setItem(vk,JSON.stringify(arr));}}catch(e){}
+  const modulePct = moduleProgress(displayModule(lesson));
+  const overallPct = courseProgressPct();
 
   $('moduleChip').textContent='Module '+displayModule(lesson);
   $('lessonChip').textContent='Lesson '+displayLesson(lesson);
@@ -1004,8 +1071,8 @@ function render(){
 
   $('dots').innerHTML=data.items.map((_,i)=>'<button class="dot '+(i===current?'active':'')+'" onclick="goTo('+i+')"></button>').join('');
   $('progressMeta').textContent=displayLabel(lesson)+' · ภาพ '+(current+1)+' / '+lessonCount+(item.sourceSlides ? ' · Source slide '+item.sourceSlides : '')+' · ทั้งโปรแกรม '+(overall+1)+' / '+MODULE_TOTAL;
-  $('barFill').style.width=modulePct+'%';
-  $('pct').textContent=modulePct+'%';
+  $('barFill').style.width=overallPct+'%';
+  $('pct').textContent=overallPct+'%';
 
   $('prevBtn').textContent = (!prevLessonId() && current===0) ? '‹ เริ่มต้น' : '‹ ก่อนหน้า';
   const nextId=nextLessonId();
@@ -1019,12 +1086,6 @@ function render(){
 
   localStorage.setItem(STORAGE_PREFIX+'_active_lesson',lesson);
   localStorage.setItem(STORAGE_PREFIX+'_l'+lesson+'_page',String(current));
-  try{
-    const vk=STORAGE_PREFIX+'_visited';
-    const arr=JSON.parse(localStorage.getItem(vk)||'[]');
-    const key=lesson+':'+current;
-    if(!arr.includes(key)){arr.push(key);localStorage.setItem(vk,JSON.stringify(arr));}
-  }catch(e){}
   preloadAdjacent();
 }
 function goTo(i){ current=i; render(); }
@@ -1129,7 +1190,7 @@ function openSource(){
     <p><strong>Module 5 · Lesson 4</strong> ใช้ภาพ 6 ภาพแบบ source-locked ครอบคลุม lab tests, free vs bound testosterone, FSH/LH/prolactin, androstanediol glucuronide, estradiol/estrone และการแปลผล testosterone จาก source slides 63–74</p>
     <p><strong>Module 5 · Lesson 5</strong> ใช้ภาพ 6 ภาพ ครอบคลุม treatment routes, transdermal creams/gels, application sites, hand washing, injection types และ dosing จาก source slides 75–91</p>
     <p><strong>Module 5 · Lesson 6</strong> ใช้ภาพ 5 ภาพ ครอบคลุม subcutaneous testosterone pellets, insertion procedure, advantages/considerations, dosing/monitoring และ summary จาก source slides 92–102</p>
-    <p><strong>Module 6 · Lesson 1</strong> ใช้ภาพ 6 ภาพ ครอบคลุมภาพรวม Skin & Hormones, ACTH กับ hyperpigmentation, Addison's disease, melasma vs age spots, acanthosis nigricans และแนวทางประเมิน/ดูแล ตามภาพที่สร้างสำหรับบทเรียนนี้</p><p><strong>Module 6 · Lesson 2</strong> ใช้ภาพ 6 ภาพ ครอบคลุม hormone balance กับ youthful skin, skin aging จากภาวะ thyroid ต่ำ, skin signs of hypothyroidism, บทบาท thyroid hormones ต่อสุขภาพผิว และแนวคิด T4–T3 balance ตามเอกสารต้นฉบับ</p><p><strong>Module 6 · Lesson 3</strong> ใช้ภาพ 6 ภาพ ครอบคลุม growth hormone กับผิวหนัง, IGF-1 receptor ในผิว, skin changes ในภาวะ GH imbalance, hydration/sebum ใน GH deficiency และการรักษา GH เพื่อสุขภาพผิว ตามภาพที่สร้างจากต้นฉบับ</p><p><strong>Module 6 · Lesson 4</strong> ใช้ภาพ 5 ภาพ ครอบคลุม melatonin กับ skin aging, การสร้าง melatonin ในผิวหนัง, DHEA กับสุขภาพผิว และผลของ DHEA ต่อ collagen ตามภาพที่สร้างจากต้นฉบับ</p><p><strong>Module 6 · Lesson 5</strong> ใช้ภาพ 6 ภาพ ครอบคลุม premature wrinkles, forehead wrinkles, youthful cheeks, smoother skin, facial wrinkles summary และบทบาท melatonin ต่อการปกป้องผิวจากริ้วรอย ตามภาพที่สร้างจากต้นฉบับ</p><p><strong>Module 6 · Lesson 6</strong> ใช้ภาพ 6 ภาพ ครอบคลุม miniature skin folds, vasopressin, aldosterone, wrinkle depth, nasolabial/pre-jowl grooves, digestive troubles, IGF-1/IGF-BP-3 และ hormone mesotherapy ตาม source slides 87–99</p><p><strong>Module 7 · Lesson 1</strong> ใช้ 4 หน้าแบบ source-locked จาก source slides 1–4: The 3 main Slimming Hormone Therapies → Hormone therapies =&gt; Slim down → Make the body lose weight &amp; become slim → A human body should be … Firm</p><p><strong>Module 7 · Lesson 2</strong> ใช้ 8 หน้า ครอบคลุม thyroid supplementation, hypothyroidism, prevalence, TSH/BMI, clinical history, childhood hypothyroidism และ adult hypothyroidism จาก source slides 5–12</p><p><strong>Module 7 · Lesson 3</strong> ใช้ 7 หน้า ครอบคลุม facial puffiness, puffy eyelids/face, swelling mechanisms, easy weight gain, increased fat mass, predisposition to obesity และ typical features of hypothyroid overweight จาก source slides 13–19</p><p><strong>Module 7 · Lesson 4</strong> ใช้ 5 หน้า เรียงตาม source slides 20–28: 20 → 21–22 → 23–24 → 25–26 → 27–28</p><p><strong>Module 7 · Lesson 5</strong> ใช้ 6 หน้า ครอบคลุม choose the best thyroid treatment, desiccated thyroid, synthetic T3–T4, crossover study และ weight outcomes จาก source slides 29–34</p><p><strong>Module 7 · Lesson 6</strong> ใช้ 7 หน้า ครอบคลุม GH → IGF-1, age-related decline, adult GH deficiency, subcutaneous fat, fat depots, GH/IGF-1 กับ BMI และการเปรียบเทียบ GH-deficient overweight vs insulin-excess overweight จาก source slides 35–50</p><p><strong>Module 7 · Lesson 7</strong> ใช้ 4 หน้า ครอบคลุม intramuscular testosterone injections, testosterone enanthate, testosterone undecanoate และ testosterone pellets จาก source slides 81–84</p><p><strong>Module 8 · Lesson 1</strong> ใช้ภาพ 8 ภาพ ครอบคลุม healthy weight reduction goals, a happier tomorrow, obesity & energy balance, obesity complications, common mistakes และ balanced energy for sustainable weight loss</p><p><strong>Module 8 · Lesson 2</strong> ใช้ภาพ 5 ภาพ ครอบคลุม nutrition science, breakfast/late dinner timing, one-plate balanced portions, Zone Diet/macronutrient balance และ food variety</p><p class="subtle">เวอร์ชันนี้รวม Module 1–8 ไว้ในโปรแกรมเดียวกัน พร้อม Home dashboard สำหรับเลือกโมดูลและกลับมาเรียนต่อได้</p>`;
+    <p><strong>Module 6 · Lesson 1</strong> ใช้ภาพ 6 ภาพ ครอบคลุมภาพรวม Skin & Hormones, ACTH กับ hyperpigmentation, Addison's disease, melasma vs age spots, acanthosis nigricans และแนวทางประเมิน/ดูแล ตามภาพที่สร้างสำหรับบทเรียนนี้</p><p><strong>Module 6 · Lesson 2</strong> ใช้ภาพ 6 ภาพ ครอบคลุม hormone balance กับ youthful skin, skin aging จากภาวะ thyroid ต่ำ, skin signs of hypothyroidism, บทบาท thyroid hormones ต่อสุขภาพผิว และแนวคิด T4–T3 balance ตามเอกสารต้นฉบับ</p><p><strong>Module 6 · Lesson 3</strong> ใช้ภาพ 6 ภาพ ครอบคลุม growth hormone กับผิวหนัง, IGF-1 receptor ในผิว, skin changes ในภาวะ GH imbalance, hydration/sebum ใน GH deficiency และการรักษา GH เพื่อสุขภาพผิว ตามภาพที่สร้างจากต้นฉบับ</p><p><strong>Module 6 · Lesson 4</strong> ใช้ภาพ 5 ภาพ ครอบคลุม melatonin กับ skin aging, การสร้าง melatonin ในผิวหนัง, DHEA กับสุขภาพผิว และผลของ DHEA ต่อ collagen ตามภาพที่สร้างจากต้นฉบับ</p><p><strong>Module 6 · Lesson 5</strong> ใช้ภาพ 6 ภาพ ครอบคลุม premature wrinkles, forehead wrinkles, youthful cheeks, smoother skin, facial wrinkles summary และบทบาท melatonin ต่อการปกป้องผิวจากริ้วรอย ตามภาพที่สร้างจากต้นฉบับ</p><p><strong>Module 6 · Lesson 6</strong> ใช้ภาพ 6 ภาพ ครอบคลุม miniature skin folds, vasopressin, aldosterone, wrinkle depth, nasolabial/pre-jowl grooves, digestive troubles, IGF-1/IGF-BP-3 และ hormone mesotherapy ตาม source slides 87–99</p><p><strong>Module 7 · Lesson 1</strong> ใช้ 4 หน้าแบบ source-locked จาก source slides 1–4: The 3 main Slimming Hormone Therapies → Hormone therapies =&gt; Slim down → Make the body lose weight &amp; become slim → A human body should be … Firm</p><p><strong>Module 7 · Lesson 2</strong> ใช้ 8 หน้า ครอบคลุม thyroid supplementation, hypothyroidism, prevalence, TSH/BMI, clinical history, childhood hypothyroidism และ adult hypothyroidism จาก source slides 5–12</p><p><strong>Module 7 · Lesson 3</strong> ใช้ 7 หน้า ครอบคลุม facial puffiness, puffy eyelids/face, swelling mechanisms, easy weight gain, increased fat mass, predisposition to obesity และ typical features of hypothyroid overweight จาก source slides 13–19</p><p><strong>Module 7 · Lesson 4</strong> ใช้ 5 หน้า เรียงตาม source slides 20–28: 20 → 21–22 → 23–24 → 25–26 → 27–28</p><p><strong>Module 7 · Lesson 5</strong> ใช้ 6 หน้า ครอบคลุม choose the best thyroid treatment, desiccated thyroid, synthetic T3–T4, crossover study และ weight outcomes จาก source slides 29–34</p><p><strong>Module 7 · Lesson 6</strong> ใช้ 7 หน้า ครอบคลุม GH → IGF-1, age-related decline, adult GH deficiency, subcutaneous fat, fat depots, GH/IGF-1 กับ BMI และการเปรียบเทียบ GH-deficient overweight vs insulin-excess overweight จาก source slides 35–50</p><p><strong>Module 7 · Lesson 7</strong> ใช้ 4 หน้า ครอบคลุม intramuscular testosterone injections, testosterone enanthate, testosterone undecanoate และ testosterone pellets จาก source slides 81–84</p><p><strong>Module 8 · Lesson 1</strong> ใช้ภาพ 8 ภาพ ครอบคลุม healthy weight reduction goals, a happier tomorrow, obesity & energy balance, obesity complications, common mistakes และ balanced energy for sustainable weight loss</p><p><strong>Module 8 · Lesson 2</strong> ใช้ภาพ 5 ภาพ ครอบคลุม nutrition science, breakfast/late dinner timing, one-plate balanced portions, Zone Diet/macronutrient balance และ food variety</p><p class="subtle">เวอร์ชันนี้รวม Module 1–8 ไว้ในโปรแกรมเดียวกัน พร้อมหน้าหลักรวม Module, progress, Final Assessment และ Certificate</p>`;
   openModal('อ้างอิงและโครงสร้างโปรแกรม',body);
 }
 function openLightbox(src,title){ $('lightboxImg').src=src; $('lightboxImg').alt=title; $('lightboxTitle').textContent=title; $('lightboxWrap').classList.add('show'); }

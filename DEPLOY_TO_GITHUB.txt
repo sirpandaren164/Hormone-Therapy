@@ -1,14 +1,9 @@
-Hormone Therapy eLearning - GitHub Pages deployment
+Hormone Therapy unified course home
 
-IMPORTANT: Upload the CONTENTS of this folder to the ROOT of the Hormone-Therapy repository.
-The repository root must contain these items side-by-side:
-  index.html
-  course.html
-  exam.html
-  certificate.html
-  verify.html
-  app/
-  assets/
-  .nojekyll
+1. Extract this ZIP.
+2. Copy ALL files/folders inside directly to the ROOT of the Hormone-Therapy repository.
+3. Replace existing files when asked.
+4. Commit and Push origin in GitHub Desktop.
+5. Wait for GitHub Pages deployment, then hard refresh (Ctrl+F5).
 
-Do not upload only the HTML files. The app/ folder contains CSS and JavaScript, and assets/ contains the lesson images and branding.
+The root index.html is now the integrated course home. course.html remains the same interface for compatibility.

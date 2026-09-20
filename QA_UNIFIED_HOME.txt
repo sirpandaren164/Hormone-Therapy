@@ -1,0 +1,11 @@
+Unified Course Home QA
+- main index is unified course page: OK
+- 54 lesson summary: OK
+- learner integrated: OK
+- final exam integrated: OK
+- certificate link: OK
+- exam link: OK
+- no floating dashboard: OK
+- signature asset retained: OK
+- Missing relative references: 1
+  ${preview}
